@@ -155,7 +155,7 @@ public class Main {
                 assert theSelectedBook != null;
 
                 theSelectedBook.checkIn();
-                System.out.printf("You have Checked In Book ID Number %d Successfully. \n", bookId);
+                System.out.printf("You Have Checked In Book ID Number %d Successfully. \n", bookId);
 
                 showCheckedOutBooks();
 

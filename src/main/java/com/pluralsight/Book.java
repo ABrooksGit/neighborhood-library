@@ -69,7 +69,13 @@ public class Book {
     }
 
     public String getFormattedBookCheckOut(){
-        return " " + this.id + " " + this.title + " " + this.isbn + " " + this.checkedOutTo;
+        //return " " + this.id + " " + this.title + " " + this.isbn + " " + this.checkedOutTo;
+        return String.format("%-5d %-51s %-21s %-15s", this.id, this.title, this.isbn,this.checkedOutTo);
+    }
+
+    public static String getFormattedBookCheckOutHeader(){
+        return  "  ID  Title                                            ISBN                  Checked Out TO\n " +
+                "---- ---------------------------------------------- ---------------------    --------------";
     }
 
 

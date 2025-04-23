@@ -6,6 +6,7 @@ public class Main {
 
     private static Scanner scanner = new Scanner(System.in);
     private static Book[] library = getPopulatedBooks();
+    private static Console console = new Console();
 
     public static void main(String[] args) {
         showScreenHome();
@@ -65,9 +66,7 @@ public class Main {
         int option;
 
         do{
-            System.out.print(homeScreenPrompt);
-            option = scanner.nextInt();
-            scanner.nextLine();
+            option = console.promptForInt(homeScreenPrompt);
             if(option == 1){
                 showScreenAvailableBooks();
             } else if (option == 2)  {
@@ -103,26 +102,26 @@ public class Main {
                 "(1, 0): ";
 
         int chooseBook;
-        int option;
+        String option;
         String input;
         String name;
 
         do{
             showAvailableBooks();
-            System.out.print(AvailableBooksScreenPrompt);
-            option = scanner.nextInt();
-            scanner.nextLine();
 
-            if(option == 1){
+
+            option = console.promptForString(AvailableBooksScreenPrompt);
+
+            if(option.equals("1")){
                 showScreenCheckOutBookYes();
 
-            }  else if (option == 0) {
+            }  else if (option.equals("0")) {
                 System.out.println("Returning to Home Screen");
             }
             else {
                 System.out.println("Not a valid option, please try again");
             }
-        } while(option != 0);
+        } while(!option.equals("0"));
 
     }
 
@@ -139,12 +138,7 @@ public class Main {
 
         //Displays checked out books with the name of the person who checked it out
         System.out.println("Checked out Books: ");
-        for (int i = 0; i < library.length; i++) {
-            Book book = library[i];
-            if (book.isCheckedOut()) {
-                System.out.println(book.getFormattedBookCheckOut());
-            }
-        }
+        showCheckedOutBooks();
         String name;
         String input;
         int options;
@@ -155,22 +149,15 @@ public class Main {
             input = scanner.nextLine();
 
             if(input.equals("1")) {
-                System.out.print("Enter the Book ID ");
-                int bookId = scanner.nextInt();
-                scanner.nextLine();
+
+                int bookId = console.promptForInt("Enter the Book ID ");
                 Book theSelectedBook = getBookById(library, bookId);
                 assert theSelectedBook != null;
 
                 theSelectedBook.checkIn();
                 System.out.printf("You have Checked In Book ID Number %d Successfully. \n", bookId);
 
-                //Re-displays Books that are checked out
-                for (int i = 0; i < library.length; i++) {
-                    Book book = library[i];
-                    if (book.isCheckedOut()) {
-                        System.out.println(" " + book.getId() + " " + book.getTitle() + " " + book.getIsbn() + " " + book.getCheckedOutTo());
-                    }
-                }
+                showCheckedOutBooks();
 
             }else{
                 System.out.println("Book ID not found");
@@ -180,15 +167,23 @@ public class Main {
 
     }
 
-    private static void showScreenCheckOutBookYes(){
-        String name;
-        System.out.print("Enter your Name: ");
-        name = scanner.nextLine();
+    private static void showCheckedOutBooks(){
+        System.out.println(Book.getFormattedBookCheckOutHeader());
+        for (int i = 0; i < library.length; i++) {
+            Book book = library[i];
+            if (book.isCheckedOut()) {
+                System.out.println(book.getFormattedBookCheckOut());
+            }
+        }
+    }
 
+    private static void showScreenCheckOutBookYes(){
+
+
+        String name = console.promptForString("What is your name: ");
         System.out.println("Which book do you want to check out?");
-        System.out.print("Enter Book ID: ");
-        int bookId = scanner.nextInt();
-        scanner.nextLine();
+        int bookId = console.promptForInt("Enter BookID: ");
+
 
         Book theSelectedBook = getBookById(library, bookId);
         assert theSelectedBook != null;

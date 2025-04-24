@@ -1,20 +1,20 @@
-1 | 978-1-78862-355-1 | Nginx HTTP Server
-2 | 978-0-321-35668-0 | Clean Code
-3 | 978-1-4919-1889-0 | Fluent Python
-4 | 978-1-4919-1880-7 | Python Cookbook
-5 | 978-0-596-52068-7 | Head First Design Patterns
-6 | 978-0-13-468599-1 | Effective Java
-7 | 978-0-13-235088-4 | Clean Architecture
-8 | 978-1-4919-1881-4 | Learning Python
-9 | 978-1-59327-599-0 | Automate the Boring Stuff with Python
-10 | 978-0-262-03384-8 | Introduction to Algorithms
-11 | 978-1-4919-5609-0 | Designing Data-Intensive Applications
-12 | 978-1-59327-928-8 | Eloquent JavaScript
-13 | 978-1-4493-6132-7 | You Don’t Know JS Yet
-14 | 978-1-4842-0070-4 | Pro Git
-15 | 978-1-59327-144-2 | Hacking: The Art of Exploitation
-16 | 978-0-13-110362-7 | The C Programming Language
-17 | 978-1-59327-733-8 | The Linux Command Line
-18 | 978-1-4919-1881-4 | Deep Learning with Python
-19 | 978-1-4493-9306-9 | High Performance Browser Networking
-20 | 978-1-4919-5246-7 | Kubernetes Up & Running
+1| 978-1-78862-355-1 | Nginx HTTP Server
+2| 978-0-321-35668-0 | Clean Code
+3| 978-1-4919-1889-0 | Fluent Python
+4| 978-1-4919-1880-7 | Python Cookbook
+5| 978-0-596-52068-7 | Head First Design Patterns
+6| 978-0-13-468599-1 | Effective Java
+7| 978-0-13-235088-4 | Clean Architecture
+8| 978-1-4919-1881-4 | Learning Python
+9| 978-1-59327-599-0 | Automate the Boring Stuff with Python
+10| 978-0-262-03384-8 | Introduction to Algorithms
+11| 978-1-4919-5609-0 | Designing Data-Intensive Applications
+12| 978-1-59327-928-8 | Eloquent JavaScript
+13| 978-1-4493-6132-7 | You Don’t Know JS Yet
+14| 978-1-4842-0070-4 | Pro Git
+15| 978-1-59327-144-2 | Hacking: The Art of Exploitation
+16| 978-0-13-110362-7 | The C Programming Language
+17| 978-1-59327-733-8 | The Linux Command Line
+18| 978-1-4919-1881-4 | Deep Learning with Python
+19| 978-1-4493-9306-9 | High Performance Browser Networking
+20| 978-1-4919-5246-7 | Kubernetes Up & Running

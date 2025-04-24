@@ -46,7 +46,7 @@ public class Main {
     private static Book getBookFromEncodedString(String encodedBook) {
         String[] temp = encodedBook.split(Pattern.quote("|"));
 
-        int id = Integer.parseInt(temp[0].trim());
+        int id = Integer.parseInt(temp[0]);
         String isbn = temp[1];
         String title = temp[2];
 
